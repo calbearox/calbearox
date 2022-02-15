@@ -1,0 +1,64 @@
+2022-02-08T13:28:28.2944125Z ##[group]Run export DISTTYPE=nightly
+2022-02-08T13:28:28.2944581Z [36;1mexport DISTTYPE=nightly[0m
+2022-02-08T13:28:28.2944983Z [36;1mexport DATESTRING=`date "+%Y-%m-%d"`[0m
+2022-02-08T13:28:28.2945531Z [36;1mexport COMMIT=$(git rev-parse --short=10 "$GITHUB_SHA")[0m
+2022-02-08T13:28:28.2945976Z [36;1m./configure && make tar -j8 SKIP_XZ=1[0m
+2022-02-08T13:28:28.2946289Z [36;1mmkdir tarballs[0m
+2022-02-08T13:28:28.2946627Z [36;1mmv *.tar.gz tarballs[0m
+2022-02-08T13:28:28.3001856Z shell: /usr/bin/bash -e {0}
+2022-02-08T13:28:28.3002242Z env:
+2022-02-08T13:28:28.3002520Z   PYTHON_VERSION: 3.10
+2022-02-08T13:28:28.3002867Z   FLAKY_TESTS: dontcare
+2022-02-08T13:28:28.3003227Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.2/x64
+2022-02-08T13:28:28.3003839Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.2/x64/lib
+2022-02-08T13:28:28.3004228Z ##[endgroup]
+2022-02-08T13:28:31.6293286Z Node.js configure: Found Python 3.10.2...
+2022-02-08T13:28:31.6294668Z INFO: configure completed successfully
+2022-02-08T13:28:31.8789161Z SKIP_XZ=1 supplied, skipping .tar.xz creation
+2022-02-08T13:28:35.9235474Z 
+2022-02-08T13:28:35.9236137Z added 121 packages, and audited 122 packages in 3s
+2022-02-08T13:28:35.9238825Z 
+2022-02-08T13:28:35.9239412Z 95 packages are looking for funding
+2022-02-08T13:28:35.9240222Z   run `npm fund` for details
+2022-02-08T13:28:35.9252561Z 
+2022-02-08T13:28:35.9252979Z found 0 vulnerabilities
+2022-02-08T13:28:35.9381043Z mkdir -p out/doc
+2022-02-08T13:28:35.9403141Z mkdir -p out/doc/api
+2022-02-08T13:28:35.9423160Z cp -r doc/api out/doc
+2022-02-08T13:28:35.9505039Z mkdir -p out/doc/api/assets
+2022-02-08T13:28:35.9523311Z if [ -d doc/api/assets ]; then cp -r doc/api/assets out/doc/api; fi;
+2022-02-08T13:28:36.2720177Z if [ -x /home/runner/work/node/node/./node ] && [ -e /home/runner/work/node/node/./node ]; then /home/runner/work/node/node/./node  tools/doc/versions.mjs out/previous-doc-versions.json; elif [ -x `command -v node` ] && [ -e `command -v node` ] && [ `command -v node` ]; then `command -v node`  tools/doc/versions.mjs out/previous-doc-versions.json; else echo "No available node, cannot run \"node  tools/doc/versions.mjs out/previous-doc-versions.json\""; exit 1; fi;
+2022-02-08T13:28:36.5021066Z if [ -x /home/runner/work/node/node/./node ] && [ -e /home/runner/work/node/node/./node ]; then /home/runner/work/node/node/./node  tools/doc/apilinks.mjs out/doc/apilinks.json lib/_http_client.js lib/net.js lib/_tls_wrap.js lib/dns.js lib/tls.js lib/path.js lib/domain.js lib/constants.js lib/timers.js lib/_http_outgoing.js lib/child_process.js lib/_http_agent.js lib/tty.js lib/querystring.js lib/wasi.js lib/async_hooks.js lib/url.js lib/http2.js lib/sys.js lib/https.js lib/zlib.js lib/_stream_readable.js lib/punycode.js lib/console.js lib/trace_events.js lib/cluster.js lib/_stream_duplex.js lib/process.js lib/_http_common.js lib/stream.js lib/vm.js lib/events.js lib/_stream_passthrough.js lib/diagnostics_channel.js lib/_stream_writable.js lib/readline.js lib/repl.js lib/string_decoder.js lib/perf_hooks.js lib/v8.js lib/buffer.js lib/assert.js lib/_stream_wrap.js lib/util.js lib/_stream_transform.js lib/module.js lib/crypto.js lib/inspector.js lib/_http_server.js lib/http.js lib/os.js lib/fs.js lib/dgram.js lib/worker_threads.js lib/_http_incoming.js lib/_tls_common.js; elif [ -x `command -v node` ] && [ -e `command -v node` ] && [ `command -v node` ]; then `command -v node`  tools/doc/apilinks.mjs out/doc/apilinks.json lib/_http_client.js lib/net.js lib/_tls_wrap.js lib/dns.js lib/tls.js lib/path.js lib/domain.js lib/constants.js lib/timers.js lib/_http_outgoing.js lib/child_process.js lib/_http_agent.js lib/tty.js lib/querystring.js lib/wasi.js lib/async_hooks.js lib/url.js lib/http2.js lib/sys.js lib/https.js lib/zlib.js lib/_stream_readable.js lib/punycode.js lib/console.js lib/trace_events.js lib/cluster.js lib/_stream_duplex.js lib/process.js lib/_http_common.js lib/stream.js lib/vm.js lib/events.js lib/_stream_passthrough.js lib/diagnostics_channel.js lib/_stream_writable.js lib/readline.js lib/repl.js lib/string_decoder.js lib/perf_hooks.js lib/v8.js lib/buffer.js lib/assert.js lib/_stream_wrap.js lib/util.js lib/_stream_transform.js lib/module.js lib/crypto.js lib/inspector.js lib/_http_server.js lib/http.js lib/os.js lib/fs.js lib/dgram.js lib/worker_threads.js lib/_http_incoming.js lib/_tls_common.js; else echo "No available node, cannot run \"node  tools/doc/apilinks.mjs out/doc/apilinks.json lib/_http_client.js lib/net.js lib/_tls_wrap.js lib/dns.js lib/tls.js lib/path.js lib/domain.js lib/constants.js lib/timers.js lib/_http_outgoing.js lib/child_process.js lib/_http_agent.js lib/tty.js lib/querystring.js lib/wasi.js lib/async_hooks.js lib/url.js lib/http2.js lib/sys.js lib/https.js lib/zlib.js lib/_stream_readable.js lib/punycode.js lib/console.js lib/trace_events.js lib/cluster.js lib/_stream_duplex.js lib/process.js lib/_http_common.js lib/stream.js lib/vm.js lib/events.js lib/_stream_passthrough.js lib/diagnostics_channel.js lib/_stream_writable.js lib/readline.js lib/repl.js lib/string_decoder.js lib/perf_hooks.js lib/v8.js lib/buffer.js lib/assert.js lib/_stream_wrap.js lib/util.js lib/_stream_transform.js lib/module.js lib/crypto.js lib/inspector.js lib/_http_server.js lib/http.js lib/os.js lib/fs.js lib/dgram.js lib/worker_threads.js lib/_http_incoming.js lib/_tls_common.js\""; exit 1; fi;
+2022-02-08T13:30:02.4467122Z git checkout-index -a -f --prefix=node-v18.0.0-nightly2022-02-082aecbd3897/
+2022-02-08T13:30:05.5142714Z mkdir -p node-v18.0.0-nightly2022-02-082aecbd3897/doc/api
+2022-02-08T13:30:05.5170229Z cp doc/node.1 node-v18.0.0-nightly2022-02-082aecbd3897/doc/node.1
+2022-02-08T13:30:05.5191639Z cp -r out/doc/api/* node-v18.0.0-nightly2022-02-082aecbd3897/doc/api/
+2022-02-08T13:30:05.5886627Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/.editorconfig
+2022-02-08T13:30:05.5920227Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/.git*
+2022-02-08T13:30:05.5943197Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/.mailmap
+2022-02-08T13:30:05.5948029Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/openssl/openssl/demos
+2022-02-08T13:30:05.5997160Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/openssl/openssl/doc
+2022-02-08T13:30:05.6137397Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/openssl/openssl/test
+2022-02-08T13:30:05.6454863Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/uv/docs
+2022-02-08T13:30:05.6484332Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/uv/samples
+2022-02-08T13:30:05.6504010Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/uv/test
+2022-02-08T13:30:05.6658369Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/v8/samples
+2022-02-08T13:30:05.6709587Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/v8/tools/profviz
+2022-02-08T13:30:05.6713293Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/deps/v8/tools/run-tests.py
+2022-02-08T13:30:05.6805039Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/doc/images # too big
+2022-02-08T13:30:05.6805931Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/test*.tap
+2022-02-08T13:30:05.6807572Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/tools/cpplint.py
+2022-02-08T13:30:05.6808432Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/tools/eslint-rules
+2022-02-08T13:30:05.6809298Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/tools/license-builder.sh
+2022-02-08T13:30:05.6812913Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/tools/node_modules
+2022-02-08T13:30:05.7199743Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/tools/osx-*
+2022-02-08T13:30:05.7229992Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897/tools/osx-pkg.pmdoc
+2022-02-08T13:30:05.7246292Z find node-v18.0.0-nightly2022-02-082aecbd3897/deps/v8/test/* -type d ! -regex '.*/test/torque$' | xargs rm -f -r
+2022-02-08T13:30:05.9167767Z find node-v18.0.0-nightly2022-02-082aecbd3897/deps/v8/test -type f ! -regex '.*/test/torque/.*' | xargs rm -f
+2022-02-08T13:30:05.9224858Z find node-v18.0.0-nightly2022-02-082aecbd3897/deps/zlib/contrib/* -type d ! -regex '.*/contrib/optimizations$' | xargs rm -f -r
+2022-02-08T13:30:05.9298071Z find node-v18.0.0-nightly2022-02-082aecbd3897/ -name ".eslint*" -maxdepth 2 | xargs rm -f
+2022-02-08T13:30:05.9355564Z find node-v18.0.0-nightly2022-02-082aecbd3897/ -type l | xargs rm -f
+2022-02-08T13:30:06.0029811Z tar -cf node-v18.0.0-nightly2022-02-082aecbd3897.tar node-v18.0.0-nightly2022-02-082aecbd3897
+2022-02-08T13:30:06.8091902Z rm -f -r node-v18.0.0-nightly2022-02-082aecbd3897
+2022-02-08T13:30:07.2827549Z gzip -c -f -9 node-v18.0.0-nightly2022-02-082aecbd3897.tar > node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz
+2022-02-08T13:31:04.5170687Z rm -f node-v18.0.0-nightly2022-02-082aecbd3897.tar
