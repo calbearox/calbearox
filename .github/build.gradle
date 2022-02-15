@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+}
+
+group "io/.github.https://maldit-dot"
+version "0.0.1"
+mainClassName = "io.ktor.server.jetty.EngineMain"
+
+repositories {
+    mavenCentral()
+    maven { url "https://maven.pkg.jetbrains.space/public/p/ktor/eap" }
+}
+
+dependencies {
+    implementation "io.ktor:ktor-server-core-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-websockets-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-hsts-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-auto-head-response-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-auth-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-jetty-jvm:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    testImplementation "io.ktor:ktor-server-tests-jvm:$ktor_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+}
