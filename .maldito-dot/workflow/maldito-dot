@@ -1,0 +1,66 @@
+On 2022-02-12 19:38, maldito187@m1cal.net wrote:
+> On 2022-02-05 05:21, maldito187@m1cal.net wrote:
+>> On 2022-02-03 06:51, maldito187@m1cal.net wrote:
+>>> "project": {
+>>>     "version": "1.0.0",
+>>>     "restore": {
+>>>       "projectUniqueName": "F:\\FrameworkReference\\LibraryA\\LibraryA.csproj",
+>>>       "projectName": "LibraryA",
+>>>       "projectPath": "F:\\FrameworkReference\\LibraryA\\LibraryA.csproj",
+>>>       "packagesPath": "F:\\FrameworkReference\\globalPackagesFolder",
+>>>       "outputPath": "F:\\FrameworkReference\\LibraryA\\obj\\",
+>>>       "projectStyle": "PackageReference",
+>>>       "fallbackFolders": [
+>>>         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+>>>       ],
+>>>       "configFilePaths": [
+>>>         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>         "C:\\Program Files
+>>> (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>       ],
+>>>       "originalTargetFrameworks": [
+>>>         "netcoreapp3.0"
+>>>       ],
+>>>       "sources": {
+>>>         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>         "https://api.nuget.org/v3/index.json": {}
+>>>       },
+>>>       "frameworks": {
+>>>         "netcoreapp3.0": {
+>>>           "projectReferences": {}
+>>>         }
+>>>       },
+>>>       "warningProperties": {
+>>>         "warnAsError": [
+>>>           "NU1605"
+>>>         ]
+>>>       }
+>>>     },
+>>>     "frameworks": {
+>>>       "netcoreapp3.0": {
+>>>           "frameworkReferences": {
+>>>             "Microsoft.WindowsDesktop.App|WPF" : {
+>>>               "privateAssets" : "none"
+>>>           }
+>>>       }
+>>>     }
+>>>   }
+>>>
+>>> http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
+>>
+>> http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
+> HTTP/1.1 200 OK
+> Content-Disposition: attachment; filename=httpie-master.tar.gz
+> Content-Length: 257336
+> Content-Type: application/x-gzip
+> 
+> Downloading 251.30 kB to "httpie-master.tar.gz"
+> Done. 251.30 kB in 2.73862s (91.76 kB/s)
+> http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
+> http POST pie.dev/post \
+>     X-Data:@files/text.txt             # Read a header from a file
+>     token==@files/text.txt             # Read a query parameter from a file
+>     name=@files/text.txt               # Read a data field’s value from a file
+>     bookmarks:=@files/data.json        # Embed a JSON object from a file
+
+http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
