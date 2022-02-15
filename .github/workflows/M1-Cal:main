@@ -1,8 +1,8 @@
-# This is a basic workflow to help you get started with Actions
+>--rootProject.name = "io/.github.https://maldit-dot.maldito-dot"
 
 name: CI
 
-# Controls when the workflow will run
+>--rootProject.name = "io/.github.https://maldit-dot.maldito-dot"
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -34,3 +34,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+>--👋 Hi, I’m @maldito-dot
