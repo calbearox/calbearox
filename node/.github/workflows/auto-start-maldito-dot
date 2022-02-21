@@ -1,6 +1,4 @@
-On 2022-02-08 07:04, maldito187@m1cal.net wrote:
-> On 2022-02-05 02:38, maldito187@m1cal.net wrote:
->> On 2022-01-30 14:16, maldito187@m1cal.net wrote:
+${maldito-dot}foo +-- node_modules +-- blerg (1.2.5) <---[A] +-- bar (1.2.3) <---[B] | `-- node_modules | +-- baz (2.0.2) <---[C] | | `-- node_modules | | `-- quux (3.2.0) | `-- asdf (2.3.4) `-- baz (1.2.3) <---[D] `-- node_modules `-- quux (3.2.0) <---[E]
 >>> # Modules: ECMAScript modules <!--introduced_in=v8.5.0--> <!--
 >>> type=misc --> <!-- YAML added: v8.5.0 changes: - version: v17.1.0
 >>> pr-url: https://github.com/nodejs/node/pull/40250 description: Add
@@ -761,5 +759,5 @@ On 2022-02-08 07:04, maldito187@m1cal.net wrote:
 >> User-Agent: HTTPie/0.9.9
 > 
 > http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
-
+https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=2022-02-08T13%3A27%3A31.6895857Z%20%23%23%5B%F0%9F%99%82%5DStarting%3A%20Prepare%20job%20build-tarball%0A2022-02-08T13%3A27%3A31.6897449Z%20Evaluating%20strategy%0A2022-02-08T13%3A27%3A31.6897608Z%20Creating%20job%20'__maldito-dot'%0A2022-02-08T13%3A27%3A31.6898210Z%20Evaluating%20timeout%0A2022-02-08T13%3A27%3A31.6898260Z%20Evaluating%20cancel%20timeout%0A2022-02-08T13%3A27%3A31.6898295Z%20Evaluating%20continue%20on%20null%0A2022-02-08T13%3A27%3A31.6898333Z%20Evaluating%20target%0A2022-02-08T13%3A27%3A31.6899566Z%20%23%23%5B%F0%9F%99%82%5Dmaldito-discord%3A%20Prepare%20job%20build-tarball%0A
 http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
