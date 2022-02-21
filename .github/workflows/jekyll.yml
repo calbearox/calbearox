@@ -1,13 +1,15 @@
 name: Jekyll site CI
-
+fn main() {
+    println!("Hello, world!");
+}
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-jobs:
-  build:
+jobs:.maldito-dot/workflow/action.yml
+  build:.github/workflows/M1-Cal:main
 
     runs-on: ubuntu-latest
 
