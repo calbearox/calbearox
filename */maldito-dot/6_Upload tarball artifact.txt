@@ -1,36 +1,24 @@
-2022-02-08T13:31:04.5900004Z ##[group]Run actions/upload-artifact@v2
-2022-02-08T13:31:04.5900301Z with:
-2022-02-08T13:31:04.5900519Z   name: tarballs
-2022-02-08T13:31:04.5900739Z   path: tarballs
-2022-02-08T13:31:04.5900996Z   if-no-files-found: warn
-2022-02-08T13:31:04.5901237Z env:
-2022-02-08T13:31:04.5901447Z   PYTHON_VERSION: 3.10
-2022-02-08T13:31:04.5901703Z   FLAKY_TESTS: dontcare
-2022-02-08T13:31:04.5902012Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.2/x64
-2022-02-08T13:31:04.5902400Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.2/x64/lib
-2022-02-08T13:31:04.5902722Z ##[endgroup]
-2022-02-08T13:31:04.6604581Z With the provided path, there will be 1 file uploaded
-2022-02-08T13:31:04.6605349Z Starting artifact upload
-2022-02-08T13:31:04.6606367Z For more detailed logs during the artifact upload process, enable step-debugging: https://docs.github.com/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging#enabling-step-debug-logging
-2022-02-08T13:31:04.6607091Z Artifact name is valid!
-2022-02-08T13:31:04.7101695Z Container for artifact "tarballs" successfully created. Starting upload of file(s)
-2022-02-08T13:31:05.2910060Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (10.0%) bytes 0:8388607
-2022-02-08T13:31:05.8257402Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (20.0%) bytes 8388608:16777215
-2022-02-08T13:31:06.3595362Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (30.0%) bytes 16777216:25165823
-2022-02-08T13:31:06.9482332Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (40.1%) bytes 25165824:33554431
-2022-02-08T13:31:07.7313034Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (50.1%) bytes 33554432:41943039
-2022-02-08T13:31:08.3055269Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (60.1%) bytes 41943040:50331647
-2022-02-08T13:31:08.7517625Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (70.2%) bytes 50331648:58720255
-2022-02-08T13:31:09.3025729Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (80.2%) bytes 58720256:67108863
-2022-02-08T13:31:09.8474089Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (90.2%) bytes 67108864:75497471
-2022-02-08T13:31:10.4120080Z Uploaded /home/runner/work/node/node/tarballs/node-v18.0.0-nightly2022-02-082aecbd3897.tar.gz (100.0%) bytes 75497472:83616948
-2022-02-08T13:31:10.4131508Z Total size of all the files uploaded is 83616949 bytes
-2022-02-08T13:31:10.4132460Z File upload process has finished. Finalizing the artifact upload
-2022-02-08T13:31:10.4403401Z Artifact has been finalized. All files have been successfully uploaded!
-2022-02-08T13:31:10.4403696Z 
-2022-02-08T13:31:10.4403899Z The raw size of all the files that were specified for upload is 83616949 bytes
-2022-02-08T13:31:10.4404463Z The size of all the files that were uploaded is 83616949 bytes. This takes into account any gzip compression used to reduce the upload size, time and storage
-2022-02-08T13:31:10.4404797Z 
-2022-02-08T13:31:10.4405656Z Note: The size of downloaded zips can differ significantly from the reported size. For more information see: https://github.com/actions/upload-artifact#zipped-artifact-downloads 
-2022-02-08T13:31:10.4406055Z 
-2022-02-08T13:31:10.4409139Z Artifact tarballs has been successfully uploaded!
+import { Chart, LineController, LineElement, PointElement, LinearScale, Title } from `chart.js`
+
+Chart.register(LineController, LineElement, PointElement, LinearScale, Title);
+
+const chart = new Chart(ctx, {
+    type: 'line',
+    // data: ...
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Chart Title'
+            }
+        },
+        scales: {
+            x: {
+                type: 'linear'
+            },
+            y: {
+                type: 'linear'
+            }
+        }
+    }
+})
