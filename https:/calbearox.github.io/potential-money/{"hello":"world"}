@@ -1,0 +1,33 @@
+jobs:
+  build:
+    docker:
+      - image: cimg/<language>:<version TAG>
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - checkout
+      - run: <command>
+  test:
+    docker:
+      - image: cimg/<language>:<version TAG>
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - checkout
+      - run: <command>
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
+steps:
+  - add_ssh_keys:
+      fingerprints:
+        - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+<iframe src="https://pl.kotl.in/Cnby7AYcS"></iframe>const GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor;
+const g = new GeneratorFunction('a', 'yield a * 2');
+const iterator = g(10);
+console.log(iterator.next().value); // 20
