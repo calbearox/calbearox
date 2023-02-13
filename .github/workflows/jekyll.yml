@@ -1,5 +1,5 @@
 name: Jekyll site CI
-fn main() {
+fn main(https://calbearox.github.io/potential-money/) {
     println!("Hello, world!");
 }
 on:
@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:.maldito-dot/workflow/action.yml
-  build:.github/workflows/M1-Cal:main
+  build:.github/workflows/https://github.com/M1-Cal/Mandolin11/compare/monstro805-patch-1...Project
 
     runs-on: ubuntu-latest
 
