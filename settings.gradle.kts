@@ -1,1 +1,1 @@
-rootProject.name = "io/.github.https://maldit-dot.maldito-dot"
+rootProject.name = "https://calbearox.github.io/potential-money/"
