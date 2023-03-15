@@ -1,5 +1,3 @@
-
-
 menu
 Build Actions for Google Assistant using Actions Builder (Level 1)
 
