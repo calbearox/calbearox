@@ -1,1 +1,1 @@
-const client = Discord.Client() // Your discord.js client or any other const { AutoPoster } = require('topgg-autoposter') AutoPoster('topgg-token', client) .on('posted', () => { console.log('Posted stats to Top.gg!') })
+
