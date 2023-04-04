@@ -1,4 +1,3 @@
-On 2022-02-16 04:12, maldito187@m1cal.net wrote:
 > { "current_user_url": "https://api.github.com/user",
 > "current_user_authorizations_html_url":
 > "https://github.com/settings/connections/applications{/client_id}",
@@ -42,8 +41,3 @@ On 2022-02-16 04:12, maldito187@m1cal.net wrote:
 > "user_search_url":
 > "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 > }
-> 0xB8563AD5aF1F79dd04937BE8B572318c8e6f43AC
-> http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
-https://play.kotlinlang.org/#eyJ2ZXJzaW9uIjoiMS42LjEwIiwicGxhdGZvcm0iOiJqcyIsImFyZ3MiOiJtYWxkaXRvLWRvdCIsIm5vbmVNYXJrZXJzIjp0cnVlLCJ0aGVtZSI6ImlkZWEiLCJjb2RlIjoiLyoqIG1hbGRpdG8tZG90L21hbGRpdG8tZG90XG4gKiAgSFRUUElFIFxuICogcGxheS5rb3RsaW5sYW5nLm9yZyBcbiAqL1xuXG4vL21hbGRpdG8tZG90LmdpdGh1Yi5pby9yZWltYWdpbmVkLW9jdG8tc3lzdGVtLyB7XG4gICBcbi8vaHR0cCBwaWUuZGV2L2Nvb2tpZXMgJ0Nvb2tpZTpzZXNzaW9uaWQ9Zm9vO2Fub3RoZXItY29va2llPW1hbGRpdG8tZG90In0=
-http://%24ci_project_id-%24ci_environment_slug.%24kube_ingress_base_domain/
-https://pl.kotl.in/BKxvXoOiC
