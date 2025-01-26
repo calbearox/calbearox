@@ -4,6 +4,5 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
-```bash
-git clone git@github.com:calbearox/potential-money.git
+```<script src="https://gist.github.com/calbearox/336c515da99ed009512e288e6b28823b.js"></script>
 ```
