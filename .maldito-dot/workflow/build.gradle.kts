@@ -32,7 +32,7 @@ dependencies {
     implementation("io.ktor:ktor-server-hsts-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-cors-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-webjars-jvm:$ktor_version")
-    implementation("org.webjars:jquery:3.2.1")
+    implementation("org.webjars:jquery:3.7.1")
     implementation("io.ktor:ktor-server-sessions-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
