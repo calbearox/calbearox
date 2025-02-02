@@ -5,7 +5,7 @@ val logback_version: String by project
 plugins {
     application
     kotlin("jvm") version "1.7.22"
-    id("io.ktor.plugin") version "2.1.3"
+    id("io.ktor.plugin") version "2.3.13"
 }
 
 group = "io/potential-money/.github.https://calbearox"
