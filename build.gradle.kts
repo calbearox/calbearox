@@ -1,32 +1,35 @@
-val ktor_version: String by project
-val kotlin_version: String by project
-val logback_version: String by project
+import requests
+import json
 
-plugins {
-    application
-    kotlin("jvm") version "1.7.22"
-    id("io.ktor.plugin") version "2.3.13"
-}
+# Replace with your actual Etherscan API key
+api_key = "d5620c39f96457007085b39999c9164840b43be7936ef7c88a0958014cfcb194"  
 
-group = "io/potential-money/.github.https://calbearox"
-version = "0.0.1"
-application {
-    mainClass.set("io/potential-money/.github.https://calbearox.ApplicationKt")
+address = "0xd19Da91E075774Efde9F0e2CBcc83ae30c1058A2"
+api_url = f"https://api.etherscan.io/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey={api_key}"
 
-    val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
-}
+try:
+    response = requests.get(api_url)
+    response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
+    data = response.json()
 
-repositories {
-    mavenCentral()
-}
+    if data["status"] == "1":  # Check if the API request was successful
+        transactions = data["result"]
+        if transactions:
+            print("Transactions found:")
+            for tx in transactions:
+                print(json.dumps(tx, indent=4))  # Print each transaction nicely formatted
+                # You can access individual elements like this:
+                # print(f"Transaction Hash: {tx['hash']}")
+                # print(f"From: {tx['from']}")
+                # print(f"To: {tx['to']}")
+                # print(f"Value: {tx['value']}") # Value is in Wei, not Ether
+                # ... other fields
+        else:
+            print("No transactions found for this address.")
+    else:
+        print(f"Error: {data['message']}")
 
-dependencies {
-    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-webjars-jvm:$ktor_version")
-    implementation("org.webjars:jquery:3.2.1")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-}
+except requests.exceptions.RequestException as e:
+    print(f"An error occurred: {e}")
+except json.JSONDecodeError as e:
+    print(f"Error decoding JSON response: {e}")
